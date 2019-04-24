@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pinboard View-->
+        <scene sceneID="w2R-VR-sIF">
+            <objects>
+                <viewController storyboardIdentifier="PinboardView" id="xC0-om-hCl" customClass="PinboardView" customModule="Pinboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sMh-ST-Fb0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="13Y-B4-rNp">
+                                <rect key="frame" x="8" y="52" width="398" height="802"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0ux-N6-axE">
+                                    <size key="itemSize" width="386" height="311"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="7cQ-1E-hJE" customClass="PinboardCell" customModule="Pinboard" customModuleProvider="target">
+                                        <rect key="frame" x="6" y="0.0" width="386" height="311"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="386" height="311"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jut-yq-um1">
+                                                    <rect key="frame" x="16" y="16" width="354" height="225"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.39907962328767121" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="SU1-t3-W8r">
+                                                    <rect key="frame" x="16" y="245" width="354" height="50"/>
+                                                    <subviews>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGW-Yf-JYy">
+                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="0.24577268835616439" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="vrY-QC-qqw"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="0.25853488869863012" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Jut-yq-um1" firstAttribute="top" secondItem="7cQ-1E-hJE" secondAttribute="top" constant="16" id="1eo-jQ-1IF"/>
+                                            <constraint firstItem="SU1-t3-W8r" firstAttribute="trailing" secondItem="Jut-yq-um1" secondAttribute="trailing" id="HIv-ur-zBL"/>
+                                            <constraint firstItem="Jut-yq-um1" firstAttribute="leading" secondItem="7cQ-1E-hJE" secondAttribute="leading" constant="16" id="Ij6-70-TcW"/>
+                                            <constraint firstAttribute="bottom" secondItem="SU1-t3-W8r" secondAttribute="bottom" constant="16" id="MK1-4O-9fF"/>
+                                            <constraint firstItem="SU1-t3-W8r" firstAttribute="leading" secondItem="Jut-yq-um1" secondAttribute="leading" id="MOf-bV-UZP"/>
+                                            <constraint firstItem="SU1-t3-W8r" firstAttribute="top" secondItem="Jut-yq-um1" secondAttribute="bottom" constant="4" id="fCE-zw-xET"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jut-yq-um1" secondAttribute="trailing" constant="16" id="k4B-JH-On2"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="imageView" destination="Jut-yq-um1" id="mvY-7Y-63J"/>
+                                            <outlet property="photoDescriptionTextView" destination="aGW-Yf-JYy" id="skB-3b-uU9"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="xC0-om-hCl" id="cv4-UB-B20"/>
+                                    <outlet property="delegate" destination="xC0-om-hCl" id="yvf-go-bMZ"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pb9-HY-tY1" firstAttribute="trailing" secondItem="13Y-B4-rNp" secondAttribute="trailing" constant="8" id="OTO-9b-TlP"/>
+                            <constraint firstItem="Pb9-HY-tY1" firstAttribute="bottom" secondItem="13Y-B4-rNp" secondAttribute="bottom" constant="8" id="gQ9-St-ZmH"/>
+                            <constraint firstItem="13Y-B4-rNp" firstAttribute="top" secondItem="Pb9-HY-tY1" secondAttribute="top" constant="8" id="hqz-lC-KfA"/>
+                            <constraint firstItem="13Y-B4-rNp" firstAttribute="leading" secondItem="Pb9-HY-tY1" secondAttribute="leading" constant="8" id="tam-LI-jBy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pb9-HY-tY1"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="13Y-B4-rNp" id="dqs-zE-93V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="31r-pC-90D" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+</document>
